@@ -1,0 +1,56 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: calc(100% - 100px);
+    height: 500px;
+    position: relative;
+    margin: 50px auto;
+    /* overflow: hidden; */
+    border: solid 2px red;
+}
+
+.slider__controls {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border:solid 1px blue;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.prev {
+    left:10px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+}
+
+.next {
+    right:10px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+}
+
+.slider__slides {
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+}
+    
+.slider__slides .slide-item {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px grey;
+    pointer-events: none;
+    /* margin-right: 15px; */
+}
